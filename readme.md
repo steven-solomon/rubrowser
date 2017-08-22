@@ -68,3 +68,13 @@ it'll analyze the current directory and open port 9000, so you can access the gr
 Because i didn't find a good visualization tool to make me understand ruby projects when I join a new one.
 
 it's great when you want to get into an open source project and visualize the structure to know where to work and the relations between modules/classes.
+
+
+### Local setup
+Install Xcode 
+Install QT
+https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit
+
+
+The docs tell you to update your .bashrc but I usually use iTerm so I had to update .bash_profile
+
