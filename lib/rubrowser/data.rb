@@ -22,8 +22,13 @@ module Rubrowser
       end
 
       @relations.each do |relation|
-        relation.set_circular if components.include?(relation.namespace.to_s)
+        relation.set_circular if circular_relation?(relation)
       end
+    end
+
+    def circular_relation?(relation)
+      components.include?(relation.namespace.to_s) &&
+        components.include?(relation.caller_namespace.to_s)
     end
 
     def components
