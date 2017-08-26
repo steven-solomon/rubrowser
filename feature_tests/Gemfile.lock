@@ -1,3 +1,9 @@
+PATH
+  remote: ..
+  specs:
+    rubrowser (0.2.7)
+      parser (~> 2.3, >= 2.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,6 +47,7 @@ GEM
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
+    ast (2.2.0)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -64,6 +71,8 @@ GEM
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     json (2.1.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -78,6 +87,8 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    parser (2.4.0.0)
+      ast (~> 2.2)
     public_suffix (2.0.5)
     puma (3.10.0)
     rack (2.0.3)
@@ -154,9 +165,11 @@ DEPENDENCIES
   capybara
   capybara-webkit
   jbuilder (~> 2.5)
+  launchy
   puma (~> 3.0)
   rails (~> 5.0.5)
   rspec-rails
+  rubrowser!
   tzinfo-data
   web-console (>= 3.3.0)
 

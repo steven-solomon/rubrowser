@@ -9,6 +9,7 @@ end
 require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
+require 'rubrowser/server'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -49,5 +50,5 @@ RSpec.configure do |config|
 end
 
 Capybara.run_server = false
-Capybara.app_host = 'http://localhost:9000'
+Capybara.app_host = 'http://localhost:8000'
 Capybara.default_driver = :webkit
