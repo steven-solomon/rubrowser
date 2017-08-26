@@ -1,4 +1,5 @@
 require 'rubrowser/data'
+require 'spec_helper'
 
 describe Rubrowser::Data do
   context 'There are dependencies' do
@@ -7,7 +8,7 @@ describe Rubrowser::Data do
         definition = double(:definition,
                             namespace: [file_namespace],
                             circular?: false)
-        file = Rubrowser::Data.new([File.expand_path(file_path)])
+        file = Rubrowser::Data.new([file_path])
 
         expect(file.relations).to eq([])
         expect(file.definitions).to eq([definition])
@@ -103,7 +104,7 @@ describe Rubrowser::Data do
       'spec/parser/fixtures/class_related_to_circular_dependency.rb'
     end
 
-    let(:file) { Rubrowser::Data.new([File.expand_path(file_path)]) }
+    let(:file) { Rubrowser::Data.new([file_path]) }
     let(:definitions) { file.definitions }
     let(:relations) { file.relations }
 
